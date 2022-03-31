@@ -12,7 +12,7 @@ public class DataConverter {
         this.data = data;
     }
 
-    URL[] getUrls() throws MalformedURLException {
+    public URL[] getUrls() throws MalformedURLException {
         URL[] urls = new URL[data.length];
         for (int i = 0; i < data.length; i++) {
             urls[i]=new URL(data[i][0]);
@@ -20,7 +20,7 @@ public class DataConverter {
         return urls;
     }
 
-    Path[] getPaths(Path dir){
+    public Path[] getPaths(Path dir){
         Path[] paths = new Path[data.length];
 
         for (int i = 0; i < data.length; i++) {
